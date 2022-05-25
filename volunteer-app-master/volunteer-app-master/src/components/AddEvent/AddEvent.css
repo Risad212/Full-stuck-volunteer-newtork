@@ -1,0 +1,49 @@
+#addEvent{
+    overflow: hidden;
+}
+.addEventContainer h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.addEventFormContainer{
+    height: 24rem;
+    box-shadow: 5px 5px 5px 5px rgb(249 248 248);
+    margin-right: 5rem;
+    border-radius: 15px;
+    background: #fff;
+}
+/*-- event form style --- */
+.addEventFormContainer form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.addEventFormContainer form input, select{
+    display: block;
+    width: 80%;
+    padding: 0.5rem 1rem;
+    margin-top: 0.8rem;
+    outline: none;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+.addEventContainer form textarea{
+    width: 80%;
+    height: 15vh;
+    display: block;
+    margin-top: 0.8rem;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+}
+.addEventContainer label{
+    font-weight: 600;
+}
+.addEventFormContainer .button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 2rem;
+    outline: none;
+    border: 1px solid rgb(35, 108, 203);
+    background: rgb(36, 110, 207);
+    color: #fff;
+    border-radius: 5px;
+}

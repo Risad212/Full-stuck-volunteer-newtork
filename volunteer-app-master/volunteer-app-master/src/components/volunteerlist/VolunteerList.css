@@ -1,0 +1,37 @@
+#valunteerList{
+    overflow: hidden;
+}
+#valunteerList .volunteer-container h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.volunteer-list-container{
+  height: 80vh;
+  box-shadow: 5px 5px 5px 5px rgb(249 248 248);
+  margin-right: 5rem;
+  border-radius: 15px;
+  padding: 1rem 1rem;
+  overflow-x: scroll;
+}
+.volunteer-list-container table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.volunteer-list-container table tr th{
+   font-size: 1.2rem;
+   padding: 1rem 1rem;
+   background: #ddd;
+}
+.volunteer-list-container table tr th:first-child{
+  border-radius: 10px 0 0 10px;
+}
+.volunteer-list-container table tr th:last-child{
+   border-radius: 0 10px 10px 0;
+}
+.volunterlist td{
+  text-align: left;
+  padding: 8px;
+  font-weight: 500;
+}
+/*--- volunter lists style ---- */

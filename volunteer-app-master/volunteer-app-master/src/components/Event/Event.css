@@ -1,0 +1,36 @@
+#event{
+    z-index: 99;
+    position: relative;
+}
+#event .input-container{
+  text-align: center;
+  margin-top: 5rem;
+}
+#event .input-container h2{
+   font-size: 2rem;
+   text-transform: capitalize;
+   font-weight: 500;
+   margin-bottom: 2rem;
+}
+#event .input-container input{
+  width: 25rem;
+  padding: .8rem .9rem;
+  color: #D6D6D6;
+  border-radius: 8px 0px 0px 8px;
+  outline: none;
+  border: none;
+}
+#event .input-container button{
+  background: #3F90FC;
+  padding: .8rem 1.5rem;
+  border: none;
+  border-radius: 0px 8px 8px 0px;
+  color: #fff;
+}
+.card{
+  border-radius: 5px;
+}
+.single-cart h5{
+  text-decoration: none;
+  color: #000;
+}

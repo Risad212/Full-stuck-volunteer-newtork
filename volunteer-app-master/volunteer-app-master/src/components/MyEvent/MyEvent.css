@@ -1,0 +1,17 @@
+.myEvent{
+    height: 100vh;
+}
+.eventCard{
+    box-shadow: 5px 5px 5px 5px rgb(232, 229, 229);
+    background: #fff;
+    border-radius: 5px;
+}
+.eventCard button{
+    padding: 0.7rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+}
+.eventCard h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+}

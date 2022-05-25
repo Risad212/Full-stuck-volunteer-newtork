@@ -1,0 +1,41 @@
+#Navbar{
+    position: relative;
+    z-index: 99;
+}
+#Navbar .navbar-brand img{
+  width: 35%;
+}
+#Navbar .navbar-nav .nav-item{
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+#Navbar .navbar-nav .nav-item .nav-link{
+    color: #0B0B0B;
+    font-weight: 400;
+}
+#Navbar .navbar-nav .nav-btn{
+    background: #3F90FC;
+    padding: .2rem 1.5rem;
+    border-radius: 6px;
+}
+#Navbar .navbar-nav .nav-btn .nav-link{
+    color: #fff;
+}
+
+#Navbar .navbar-nav .nav-btn:nth-child(even){
+    background: #434141;
+}
+.btn-container{
+    display: flex;
+    margin-left: 1rem;
+    align-items: center;
+}
+.btn-container li{
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 992px) {
+    .btn-container{
+        margin: 0;
+    }
+}

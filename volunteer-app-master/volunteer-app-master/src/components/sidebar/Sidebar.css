@@ -1,0 +1,13 @@
+#sidebar img{
+    width: 60%;
+}
+#sidebar ul li a{
+    color: #000;
+}
+#sidebar{
+    box-shadow: 5px 5px 5px 5px rgb(245, 245, 245);
+    height: 100vh;
+}
+#sidebar ul{
+    padding: 0;
+}

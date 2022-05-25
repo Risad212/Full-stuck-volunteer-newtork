@@ -1,0 +1,49 @@
+#login .logo img{
+    width: 15%;
+    display: block;
+    margin: auto;
+    padding-top: 1rem;
+}
+/*--- social account style ---- */
+.social-account {
+    border: 1px solid rgb(146, 146, 146);
+    padding: 5px 1rem;
+    border-radius: 41px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+#login .social-account img {
+    width: 8%;
+}
+.social-account span{
+    margin-left: 70px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #777;
+}
+
+.login-container{
+    border: 1px solid #ABABAB;
+    width: 470px;
+    height: 357px;
+    margin: auto;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-container h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.login-container span{
+  font-size: 1rem;
+  font-weight: 600;
+}
+.login-container span a{
+    color: #3F90FC;
+}
