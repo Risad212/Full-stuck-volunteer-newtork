@@ -13,7 +13,7 @@ const VolunteerList = () => {
     },[])
    
     function delateEvent(event,id){
-       fetch(`https://volunternetworkapp.herokuapp.com/delate/${id}`,{
+       fetch(`http://localhost:5000/delate/${id}`,{
           method: 'DELETE',
        })
        .then(res => res.json)

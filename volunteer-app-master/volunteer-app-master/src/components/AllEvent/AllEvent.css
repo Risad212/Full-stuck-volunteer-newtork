@@ -1,3 +1,30 @@
-.AllEvent th{
-    width: 10%;
+#AllEvent{
+    overflow-x: hidden;
+}
+.AllEvent-wrapper{
+  height: 80vh;
+  border-radius: 15px;
+  padding: 1rem 1rem;
+  overflow-x: scroll;
+  border-radius: 15px;
+}
+.AllEvent-container table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.AllEvent-container table tr{
+    border: 1px solid rgb(183, 180, 180);
+}
+.AllEvent-container table th{
+    width: 20%;
+    background: rgb(125, 121, 121);
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid rgb(183, 180, 180);
+}
+.AllEvent-container table td{
+    width: 20%;
+    border: 1px solid rgb(183, 180, 180);
+    padding: .5rem .8rem;
 }
