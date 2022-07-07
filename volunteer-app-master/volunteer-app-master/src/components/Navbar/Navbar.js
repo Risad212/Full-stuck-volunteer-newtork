@@ -36,7 +36,7 @@ const Navbar = ({eventPage}) => {
                          <Link class="nav-link" to="/myevent">Event</Link>
                         </li>
                         <li class="nav-item">
-                          <Link class="nav-link" to="/adminlogin">Blog</Link>
+                          <Link class="nav-link" to="/adminlogin">Admin</Link>
                       </li>
                        <div className="btn-container">
                          {

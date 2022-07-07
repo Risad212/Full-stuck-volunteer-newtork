@@ -27,12 +27,16 @@ const useStyles = makeStyles({
 const Event = () => {
     const [login, setLogin] = useContext(userContext)
     const [event, setEvent] = useState()
+    const [query, setQuery] = useState()
+   
+    console.log(event? event.filter(evn => evn.title.toLowerCase().includes(query)): '')
 
     useEffect(() => {
       fetch('https://volunternetworkapp.herokuapp.com/adminEvent')
       .then(res => res.json())
       .then(res => setEvent(res))
     },[])
+
 
     const classes = useStyles();
     
@@ -41,7 +45,7 @@ const Event = () => {
            <div className="container">
               <div className="input-container">
                   <h2>I grow by helping people in need.</h2>
-                   <input type="text" placeholder='Search....'/>
+                   <input type="text" placeholder='Search....' onChange={(e) => setQuery(e.target.value)}/>
                    <button>Search</button>
               </div>
               <div className="row my-5">
@@ -49,7 +53,8 @@ const Event = () => {
                    event? 
                     <>
                      {
-                      event.map(elem => {
+                      query?(
+                      event.filter(evn => evn.title.toLowerCase().includes(query)).map(elem => {
                        return (
                            <>
                             <div className="col-3 mb-5">
@@ -83,6 +88,44 @@ const Event = () => {
                            </>
                           )
                          })
+                         )
+                         :
+                         (
+                          event.map(elem => {
+                            return (
+                                <>
+                                 <div className="col-3 mb-5">
+                                   <div className="single-cart" onClick={(e) => setLogin({eventName: e.target.parentNode.firstChild.innerText})}>
+                                    <Link to="/login">
+                                   <Card className={classes.root}>
+                                     <CardActionArea>
+                                       <CardMedia
+                                         className={classes.media}
+                                         image={`http://localhost:5000/${elem?.fileName}`}
+                                         title="Contemplative Reptile"
+                                       />
+                                       <CardContent>
+                                         <Typography gutterBottom variant="h5" component="h2">
+                                           {elem?.title}
+                                         </Typography>
+                                         <Typography variant="body2" color="textSecondary" component="p">
+                                           {elem?.disc}
+                                         </Typography>
+                                       </CardContent>
+                                     </CardActionArea>
+                                     <CardActions>
+                                       <Button size="small" color="primary">
+                                          {elem?.date}
+                                       </Button>
+                                     </CardActions>
+                                     </Card>
+                                   </Link>
+                                   </div>
+                                </div>
+                                </>
+                               )
+                              })
+                           ) 
                         }
                       </>
                       :
