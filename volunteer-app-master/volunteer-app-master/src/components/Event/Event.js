@@ -29,7 +29,7 @@ const Event = () => {
     console.log(event? event.filter(evn => evn.title.toLowerCase().includes(query)): '')
 
     useEffect(() => {
-      fetch('https://volunternetworkapp.herokuapp.com/adminEvent')
+      fetch('http://localhost:5000/adminEvent')
       .then(res => res.json())
       .then(res => setEvent(res))
     },[])

@@ -11,7 +11,7 @@ import VolunteerList from './components/volunteerlist/VolunteerList'
 import AddEvent from './components/AddEvent/AddEvent';
 import AdminLoginPanel from './components/AdminLoginPanel/AdminLoginPanel';
 import AdminRoute from './components/AdminRoute/AdminRoute';
-
+import AllEvent from './components/AllEvent/AllEvent';
 
 export const userContext = createContext()
 
@@ -28,6 +28,7 @@ function App() {
             <Route path='/myevent' element={<PrivetRoute><MyEvent /></PrivetRoute>}/>
             <Route path='/volunteerlist' element={<AdminRoute><VolunteerList /></AdminRoute>} />
             <Route path='/addevent' element={<AdminRoute><AddEvent /></AdminRoute>} />
+            <Route path='/allevent' element={<AdminRoute><AllEvent /></AdminRoute>} />
             <Route path='/adminlogin' element={<AdminLoginPanel />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
