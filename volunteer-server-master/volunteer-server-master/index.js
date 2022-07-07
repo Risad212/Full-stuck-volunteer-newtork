@@ -116,7 +116,7 @@ client.connect(err => {
     const adminEvent = {...req.body,fileName}
     admincollection.insertOne(adminEvent)
      .then(result => {
-         console.log('event added sucessfully')
+         console.log('event added sucessfully');
      })
   })
 
@@ -128,6 +128,16 @@ client.connect(err => {
       res.send(document)
     })
   })
+
+ // delate admin event
+ //================================
+ app.delete('/eventDelate/:id',(req,res) => {
+
+  admincollection.deleteOne({_id: ObjectId(req.params.id)})
+  .then(result => {
+    res.send(result.deletedCount > 0)
+  })
+})
 
 });
 
@@ -141,7 +151,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(PORT)
+app.listen(PORT || 5000)
 
 
 
