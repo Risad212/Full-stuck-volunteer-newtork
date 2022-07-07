@@ -1,4 +1,5 @@
 import React, {useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Sidebar from '../sidebar/Sidebar';
 import './AddEvent.css';
 
@@ -6,7 +7,8 @@ import './AddEvent.css';
 const AddEvent = () => {
     const [event, setEvent] = useState()
     const [file, setFile] = useState()
-
+    
+    const navigate = useNavigate()
 
     const handleBlur = (e) => {
       if(e.target.value){
@@ -24,11 +26,16 @@ const AddEvent = () => {
         formData.append('date', event.date)
         formData.append('disc', event.discription)
 
-        fetch('https://volunternetworkapp.herokuapp.com/addEvent', {
+        fetch('http://localhost:5000/addEvent', {
             method: 'POST',
             body: formData
         })
-        .then(res => res.json())
+        .then(res => {
+            res.json();
+            if(res){
+                navigate('/')
+            }
+        })
         .then(error => console.log(error))
     }
     

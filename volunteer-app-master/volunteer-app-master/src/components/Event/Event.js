@@ -12,7 +12,6 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 
 
-
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -21,8 +20,6 @@ const useStyles = makeStyles({
     height: 140,
   },
 });
-
-
 
 const Event = () => {
     const [login, setLogin] = useContext(userContext)
